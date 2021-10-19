@@ -71,15 +71,15 @@ class Login extends Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => ({
-  dispatchEmailValue: (emailValue) => dispatch(setLoginValue(emailValue)),
-});
-
 Login.propTypes = {
   dispatchEmailValue: PropTypes.func.isRequired,
   history: PropTypes.shape({
     push: PropTypes.func,
   }).isRequired,
 };
+
+const mapDispatchToProps = (dispatch) => ({
+  dispatchEmailValue: (emailValue) => dispatch(setLoginValue(emailValue)),
+});
 
 export default connect(null, mapDispatchToProps)(Login);
