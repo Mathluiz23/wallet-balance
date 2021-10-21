@@ -64,6 +64,7 @@ class Login extends Component {
           <Button
             disabled={ !emailValidation || password.length < MIN_CHARACTER }
             onClick={ this.handleClick }
+            label="Entrar"
           />
         </div>
       </div>
