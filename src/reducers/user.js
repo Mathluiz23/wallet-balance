@@ -10,12 +10,14 @@ const INITIAL_STATE = {
 
 function user(state = INITIAL_STATE, action) {
   switch (action.type) {
-  case SET_LOGIN_VALUE:
-    return { ...state, email: action.payload.email };
-  // case SET_PASSWORD_VALUE:
-  //   return { ...state, password: action.payload.password };
-  default:
-    return state;
+    case SET_LOGIN_VALUE:
+      localStorage.setItem('login', JSON.stringify(action.payload.email));
+      return {
+        ...state,
+        email: action.payload.email,
+      };
+    default:
+      return JSON.parse(localStorage.getItem('login'));
   }
 }
 export default user;
