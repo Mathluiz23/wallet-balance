@@ -1,0 +1,172 @@
+form {
+  align-items: center;
+  display: flex;
+  margin: auto;
+  margin-top: 25px;
+  width: 90%;
+}
+
+.button-add {
+  align-items: center;
+  background-color: rgb(0, 145, 255);
+  border-radius: 5px;
+  border-style: none;
+  box-shadow: 2px 3px 2px 1px black;
+  color: white;
+  display: flex;
+  font-size: 15px;
+  font-weight: 900;
+  height: 40px;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.container-table {
+  margin: auto;
+  margin-top: 30px;
+  min-width: 180vh;
+  width: 90%;
+}
+
+table {
+  margin: auto;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+th {
+  background-color: #f1f1f1;
+  border-bottom: solid rgb(0, 145, 255);
+  font-size: 15px;
+  height: 45px;
+  width: 150px;
+}
+
+thead {
+  border-collapse: collapse;
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+  width: 150px;
+}
+
+.container-table tr {
+  align-items: center;
+	height: 45px;
+  text-align: center;
+  width: 150px;
+}
+
+.container-table tr:nth-child(2n+1) {
+	background-color: #00000020;
+}
+
+.select-options {
+  align-items: center;
+  display: block;
+  height: 60px;
+  justify-content: center;
+  margin-top: 0;
+}
+
+select {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  display: flex;
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+  height: 50px;
+  line-height: 1;
+  margin: 10px;
+  margin-top: 12px;
+  -webkit-appearance: none;
+  width: 150px;
+}
+
+option {
+  border: 1px solid #cbcbcb;
+  box-shadow: 0 0 0 0;
+  height: 40px;
+}
+
+select:focus {
+  outline: 0;
+}
+
+span {
+  color: #3951b2;
+  display: block;
+  font-size: 12px;
+  margin-left: 10px;
+  margin-top: 5px;
+  position: absolute;
+}
+
+.label-float {
+  padding-top: 13px;
+  position: relative;
+}
+
+.label-float input {
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-left: 10px;
+  min-width: 150px;
+  outline: none;
+  padding: 15px 20px;
+  transition: all .1s linear;
+  -webkit-transition: all .1s linear;
+  -moz-transition: all .1s linear;
+  -webkit-appearance: none;
+}
+
+.label-float input:focus {
+  border: 1px solid #3951b2;
+}
+
+.label-float input::placeholder {
+  color: transparent;
+  font-size: 14px;
+}
+
+.label-float label {
+  background-color: white;
+  box-sizing: border-box;
+  left: 15px;
+  padding: 5px;
+  pointer-events: none;
+  position: absolute;
+  top: calc(50% - 8px);
+  transition: all .1s linear;
+  -webkit-transition: all .1s linear;
+  -moz-transition: all .1s linear;
+}
+
+.label-float input:required:invalid + label{
+  color: red;
+}
+
+.label-float input:focus:required:invalid{
+  border: 2px solid red;
+}
+
+.label-float input:required:invalid + label:before{
+  content: '*';
+}
+.label-float input:focus + label,
+.label-float input:not(:placeholder-shown) + label {
+  color: #3951b2;
+  font-size: 12px;
+  top: 0;
+}
+
+
+hr {
+  background-color: rgb(0, 145, 255);
+  border-color: rgb(0, 145, 255);
+  border-top-width: 2px;
+  height: 2px;
+  width: 89.5%;
+}
