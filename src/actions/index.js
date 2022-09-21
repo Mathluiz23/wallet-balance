@@ -4,20 +4,32 @@ export const SET_PASSWORD_VALUE = 'SET_PASSWORD_VALUE';
 
 export const SET_CURRENCIES = 'SET_CURRENCIES';
 export const SET_EXPENSES = 'SET_EXPENSES';
+export const REMOVE_EXPENSE = 'REMOVE_EXPENSE';
 
 // payload é o que recebo na  action que vai alterar no reducer e na store
 export const setLoginValue = (payload) => ({
-  type: SET_LOGIN_VALUE, payload });
+  type: SET_LOGIN_VALUE,
+  payload,
+});
 
 export const setPasswordValue = (payload) => ({
-  type: SET_PASSWORD_VALUE, payload });
+  type: SET_PASSWORD_VALUE,
+  payload,
+});
 
 export const setCurrencies = (payload) => ({
-  type: SET_CURRENCIES, payload });
+  type: SET_CURRENCIES,
+  payload,
+});
 
 export const setExpense = (expenses) => ({
   type: SET_EXPENSES,
   payload: { expenses },
+});
+
+export const removeExpense = (payload) => ({
+  type: REMOVE_EXPENSE,
+  payload,
 });
 
 // Ação para informar que a requisição da api começou
