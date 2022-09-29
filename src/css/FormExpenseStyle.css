@@ -2,8 +2,31 @@ form {
   align-items: center;
   display: flex;
   margin: auto;
-  margin-top: 25px;
+  overflow: auto;
   width: 90%;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+  width: 90%;
+}
+
+.container-expense {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 95%;
+}
+
+.container-inputs {
+  display: flex;
+  flex-direction: row;
+  width: 45%;
 }
 
 .button-add {
@@ -16,21 +39,25 @@ form {
   display: flex;
   font-size: 15px;
   font-weight: 900;
-  height: 40px;
+  height: 50px;
   justify-content: center;
-  margin-top: 5px;
+  margin: 10px;
+  margin-top: 15px;
+  width: 100px;
 }
 
 .container-table {
+  display: flex;
   margin: auto;
   margin-top: 30px;
-  min-width: 180vh;
+  overflow: auto;
   width: 90%;
 }
 
 table {
   margin: auto;
   margin-bottom: 50px;
+  overflow: auto;
   width: 100%;
 }
 
@@ -39,26 +66,29 @@ th {
   border-bottom: solid rgb(0, 145, 255);
   font-size: 15px;
   height: 45px;
-  width: 150px;
 }
 
 thead {
   border-collapse: collapse;
   margin-top: 20px;
   text-align: center;
-  width: 100%;
-  width: 150px;
 }
 
 .container-table tr {
   align-items: center;
-	height: 45px;
+  height: 45px;
   text-align: center;
-  width: 150px;
 }
 
-.container-table tr:nth-child(2n+1) {
-	background-color: #00000020;
+.container-table tr:nth-child(2n + 1) {
+  background-color: #00000020;
+}
+
+.container-select-option {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  width: 60%;
 }
 
 .select-options {
@@ -66,22 +96,24 @@ thead {
   display: block;
   height: 60px;
   justify-content: center;
-  margin-top: 0;
+  margin: 0 5px;
+  width: 30%;
 }
 
 select {
   background: transparent;
-  border: 0;
-  border-radius: 0;
+  border: 0.5px solid blue;
+  border-radius: 5px;
   display: flex;
   font-family: Helvetica, sans-serif;
-  font-size: 14px;
-  height: 50px;
+  font-size: 13px;
+  height: 45px;
   line-height: 1;
-  margin: 10px;
-  margin-top: 12px;
+  margin: 12px 10px;
+  min-width: 96px;
+  padding: 10px;
+  width: 80%;
   -webkit-appearance: none;
-  width: 150px;
 }
 
 option {
@@ -95,31 +127,46 @@ select:focus {
 }
 
 span {
+  background-color: white;
   color: #3951b2;
-  display: block;
+  display: flex;
   font-size: 12px;
-  margin-left: 10px;
-  margin-top: 5px;
+  height: 15px;
+  margin-left: 17px;
+  margin-top: -2px;
+  padding: 5px;
   position: absolute;
+  width: 40px;
+}
+
+.span-method-pag {
+  width: 70px;
+}
+
+.span-tag {
+  width: 25px;
 }
 
 .label-float {
+  display: flex;
   padding-top: 13px;
   position: relative;
+  width: 46%;
 }
 
 .label-float input {
   border: 1px solid lightgrey;
   border-radius: 5px;
   font-size: 14px;
+  height: 40px;
   margin-left: 10px;
-  min-width: 150px;
+  max-width: 220px;
+  min-width: 60px;
   outline: none;
-  padding: 15px 20px;
-  transition: all .1s linear;
-  -webkit-transition: all .1s linear;
-  -moz-transition: all .1s linear;
+  transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
   -webkit-appearance: none;
+  -webkit-transition: all 0.1s linear;
 }
 
 .label-float input:focus {
@@ -139,22 +186,23 @@ span {
   pointer-events: none;
   position: absolute;
   top: calc(50% - 8px);
-  transition: all .1s linear;
-  -webkit-transition: all .1s linear;
-  -moz-transition: all .1s linear;
+  transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
 }
 
-.label-float input:required:invalid + label{
+.label-float input:required:invalid + label {
   color: red;
 }
 
-.label-float input:focus:required:invalid{
+.label-float input:focus:required:invalid {
   border: 2px solid red;
 }
 
-.label-float input:required:invalid + label:before{
-  content: '*';
+.label-float input:required:invalid + label:before {
+  content: "*";
 }
+
 .label-float input:focus + label,
 .label-float input:not(:placeholder-shown) + label {
   color: #3951b2;
@@ -162,11 +210,75 @@ span {
   top: 0;
 }
 
-
 hr {
   background-color: rgb(0, 145, 255);
   border-color: rgb(0, 145, 255);
   border-top-width: 2px;
   height: 2px;
   width: 89.5%;
+}
+/* Responsividade */
+
+@media screen and (min-width: 650px) and (max-width: 750px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    width: 90%;
+  }
+
+  .button-add {
+    font-size: 20px;
+    font-weight: 900;
+    height: 50px;
+    width: 200px;
+  }
+}
+
+@media screen and (min-width: 200px) and (max-width: 649px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    width: 90%;
+  }
+
+  .container-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    width: 50%;
+  }
+
+  .container-select-option {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50%;
+  }
+
+  .select-options {
+    width: 100%;
+  }
+
+  .label-float {
+    display: flex;
+    padding-top: 13px;
+    position: relative;
+    width: 90%;
+  }
+
+  .button-add {
+    font-size: 20px;
+    font-weight: 900;
+    height: 50px;
+    width: 200px;
+  }
 }
