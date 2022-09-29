@@ -16,7 +16,7 @@ const CHARACTHER_TABLE = [
   'Câmbio utilizado',
   'Valor convertido',
   'Moeda de conversão',
-  'Editar/Excluir',
+  'Excluir',
 ];
 
 class Wallet extends Component {
@@ -43,7 +43,7 @@ class Wallet extends Component {
             <thead>
               <tr>
                 {CHARACTHER_TABLE.map((item) => (
-                  <th key={ item }>{item}</th>
+                  <th key={item}>{item}</th>
                 ))}
               </tr>
             </thead>
@@ -59,7 +59,7 @@ class Wallet extends Component {
                     currency,
                     exchangeRates,
                   }) => (
-                    <tr key={ id }>
+                    <tr key={id}>
                       <td>{description}</td>
                       <td>{tag}</td>
                       <td>{method}</td>

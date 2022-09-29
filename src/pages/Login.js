@@ -32,7 +32,6 @@ class Login extends Component {
   }
 
   render() {
-    // validação de e-mail construída com ajuda do colega Vitor Silva
     const { email, password } = this.state;
     const emailValidation = email.match(/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/);
 
