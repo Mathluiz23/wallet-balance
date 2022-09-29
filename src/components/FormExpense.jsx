@@ -52,68 +52,73 @@ class FormExpense extends Component {
     const { currencies } = this.props;
     const { value, description } = this.state;
     return (
-      <>
-        <div className="label-float">
-          <input
-            placeholder=" "
-            type="number"
-            id="value"
-            name="value"
-            value={ value }
-            onChange={ this.handleChange }
-          />
-          <label htmlFor="value">Valor</label>
+      <div className="container-expense">
+        <div className="container-inputs">
+          <div className="label-float">
+            <input
+              placeholder=" "
+              type="number"
+              id="value"
+              name="value"
+              value={ value }
+              onChange={ this.handleChange }
+            />
+            <label htmlFor="value">Valor</label>
+          </div>
+          <div className="label-float">
+            <input
+              placeholder=" "
+              type="text"
+              name="description"
+              id="description"
+              value={ description }
+              onChange={ this.handleChange }
+            />
+            <label htmlFor="description">Descrição</label>
+          </div>
         </div>
-        <div className="label-float">
-          <input
-            placeholder=" "
-            type="text"
-            name="description"
-            id="description"
-            value={ description }
-            onChange={ this.handleChange }
-          />
-          <label htmlFor="description">Descrição</label>
-        </div>
+        <div className="container-select-option">
+          <div className="select-options">
+            <label htmlFor="currency">
+              <span>Moeda</span>
+            </label>
+            <select id="currency" name="currency" onChange={ this.handleChange }>
+              { currencies.map((currency) => (
+                <option value={ currency } key={ currency }>{ currency }</option>)) }
+            </select>
+          </div>
 
-        <div className="select-options">
-          <label htmlFor="currency">
-            <span>Moeda</span>
-          </label>
-          <select id="currency" name="currency" onChange={ this.handleChange }>
-            { currencies.map((currency) => (
-              <option value={ currency } key={ currency }>{ currency }</option>)) }
-          </select>
-        </div>
+          <div className="select-options">
+            <label htmlFor="method">
+              <span className="span-method-pag">Método Pag</span>
+            </label>
+            <select id="method" name="method" onChange={ this.handleChange }>
+              { PAY_METHOD.map((pay) => (
+                <option value={ pay } key={ pay }>{ pay }</option>)) }
+            </select>
+          </div>
 
-        <div className="select-options">
-          <label htmlFor="method">
-            <span>Método de pagamento</span>
-          </label>
-          <select id="method" name="method" onChange={ this.handleChange }>
-            { PAY_METHOD.map((pay) => (
-              <option value={ pay } key={ pay }>{ pay }</option>)) }
-          </select>
+          <div className="select-options">
+            <label htmlFor="tag">
+              <span className="span-tag">Tag</span>
+            </label>
+            <select id="tag" name="tag" onChange={ this.handleChange }>
+              { TAG_TYPE.map((tag) => (
+                <option value={ tag } key={ tag }>{ tag }</option>)) }
+            </select>
+          </div>
         </div>
-
-        <div className="select-options">
-          <label htmlFor="tag">
-            <span>Tag</span>
-          </label>
-          <select id="tag" name="tag" onChange={ this.handleChange }>
-            { TAG_TYPE.map((tag) => (
-              <option value={ tag } key={ tag }>{ tag }</option>)) }
-          </select>
-        </div>
-      </>
+      </div>
     );
   }
 
   render() {
     return (
       <>
-        <form className="inputs-form">
-          {this.formsDespesas()}
+        <div className="container">
+          <form className="inputs-form">
+            {this.formsDespesas()}
+          </form>
           <div>
             <Button
               className="button-add"
@@ -121,8 +126,8 @@ class FormExpense extends Component {
               onClick={ this.handleClick }
             />
           </div>
-        </form>
-        <hr/>
+        </div>
+        <hr />
       </>
     );
   }
