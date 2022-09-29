@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-
+import { GiWallet } from 'react-icons/gi';
 import { setLoginValue } from '../actions';
 import Button from '../components/Button';
+import '../css/LoginStyle.css';
 
 const MIN_CHARACTER = 6;
 
@@ -36,35 +37,41 @@ class Login extends Component {
     const emailValidation = email.match(/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/);
 
     return (
-      <div>
-        <h1>Login</h1>
-        <div>
-          <input
-            data-testid="email-input"
-            type="email"
-            label="email"
-            placeholder="Informe seu e-mail"
-            name="email"
-            value={ email }
-            onChange={ this.handleInputChange }
-            required
-          />
-          <input
-            data-testid="password-input"
-            type="password"
-            label="password"
-            placeholder="Informe sua senha"
-            minLength={ MIN_CHARACTER }
-            name="password"
-            value={ password }
-            onChange={ this.handleInputChange }
-            required
-          />
-          <Button
-            disabled={ !emailValidation || password.length < MIN_CHARACTER }
-            onClick={ this.handleClick }
-            label="Entrar"
-          />
+      <div className="container-page">
+        <div className="container-form-login">
+          <div className="project-name">
+            <h1>Wallet</h1>
+            <GiWallet className="icon" size={50} />
+          </div>
+          <div className="form-login">
+            <input
+              data-testid="email-input"
+              type="email"
+              label="email"
+              placeholder="Informe seu e-mail"
+              name="email"
+              value={email}
+              onChange={this.handleInputChange}
+              required
+            />
+            <input
+              data-testid="password-input"
+              type="password"
+              label="password"
+              placeholder="Informe sua senha"
+              minLength={MIN_CHARACTER}
+              name="password"
+              value={password}
+              onChange={this.handleInputChange}
+              required
+            />
+            <Button
+              className="button-login"
+              disabled={!emailValidation || password.length < MIN_CHARACTER}
+              onClick={this.handleClick}
+              label="Entrar"
+            />
+          </div>
         </div>
       </div>
     );
