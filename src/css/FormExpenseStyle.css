@@ -215,7 +215,8 @@ hr {
   border-color: rgb(0, 145, 255);
   border-top-width: 2px;
   height: 2px;
-  width: 89.5%;
+  margin: auto;
+  width: 90%;
 }
 /* Responsividade */
 
@@ -280,5 +281,14 @@ hr {
     font-weight: 900;
     height: 50px;
     width: 200px;
+  }
+
+  hr {
+    background-color: rgb(0, 145, 255);
+    border-color: rgb(0, 145, 255);
+    border-top-width: 2px;
+    height: 2px;
+    margin: auto;
+    width: 90%;
   }
 }
