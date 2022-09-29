@@ -18,7 +18,7 @@ class Header extends Component {
         <header>
           <div className="project-name">
             <h1>Wallet balance</h1>
-            <GiWallet size={ 60 } />
+            <GiWallet size={ 50 } />
           </div>
         </header>
         <div className="container-info-header">
