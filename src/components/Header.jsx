@@ -18,7 +18,7 @@ class Header extends Component {
         <header>
           <div className="project-name">
             <h1>Wallet balance</h1>
-            <GiWallet size={ 50 } />
+            <GiWallet size={40} />
           </div>
         </header>
         <div className="container-info-header">
@@ -29,8 +29,8 @@ class Header extends Component {
             {email || emailLocalStorage}
           </div>
           <div className="resume-expense" data-testid="total-field">
-            { `Despesa Total: ${totalExpense}` }
-            <GiBrazilFlag size={ 30 } className="icon" />
+            {`Despesa Total: ${totalExpense}`}
+            <GiBrazilFlag size={30} className="icon" />
             <div className="coin" data-testid="header-currency-field">
               BRL
             </div>
