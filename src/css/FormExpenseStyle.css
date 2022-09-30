@@ -218,6 +218,7 @@ hr {
   margin: auto;
   width: 90%;
 }
+
 /* Responsividade */
 
 @media screen and (min-width: 650px) and (max-width: 750px) {
@@ -256,6 +257,7 @@ hr {
     justify-content: center;
     margin: 10px;
     width: 50%;
+    border: solid palevioletred;
   }
 
   .container-select-option {
@@ -270,10 +272,7 @@ hr {
   }
 
   .label-float {
-    display: flex;
-    padding-top: 13px;
-    position: relative;
-    width: 90%;
+    width: 100%;
   }
 
   .button-add {
@@ -281,6 +280,13 @@ hr {
     font-weight: 900;
     height: 50px;
     width: 200px;
+  }
+
+  .label-float input:focus + label,
+  .label-float input:not(:placeholder-shown) + label {
+    color: #3951b2;
+    font-size: 12px;
+    top: 6px;
   }
 
   hr {
