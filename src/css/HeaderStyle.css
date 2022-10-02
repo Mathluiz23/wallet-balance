@@ -55,32 +55,36 @@ header {
     flex-wrap: wrap;
   }
 
+  .project-name h1 {
+    font-size: 35px;
+  }
+
   .email {
     align-items: center;
     color: white;
     display: flex;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: bold;
-    justify-content: flex-start;
-    margin: 2px;
-    width: 45%;
+    justify-content: center;
+    width: 80%;
   }
 
   .resume-expense {
     color: white;
     display: flex;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: bold;
-    justify-content: flex-start;
-    margin: 2px;
-    width: 42%;
+    justify-content: center;
+    width: 100%;
   }
 
   .coin {
-    margin-left: 2px;
+    font-size: 16px;
+    height: 20px;
   }
 
   .icon {
-    margin-left: 7px;
+    margin-right: -15px;
+    width: 40px;
   }
 }

@@ -3,7 +3,7 @@
 }
 
 .container-page {
-  background-color: rgb(0, 76, 126);
+  background-color: rgb(0, 42, 79);
   display: flex;
   height: 100vh;
 }
@@ -38,7 +38,7 @@
 }
 
 input {
-  border: solid 0.5px rgb(0, 76, 126);
+  border: solid 0.5px rgb(0, 42, 79);
   border-radius: 5px;
   height: 35px;
   margin: 10px;
@@ -47,7 +47,7 @@ input {
 
 .button-login {
   align-items: center;
-  background-color: rgb(0, 76, 126);
+  background-color: rgb(0, 42, 79);
   border-radius: 5px;
   color: white;
   display: flex;

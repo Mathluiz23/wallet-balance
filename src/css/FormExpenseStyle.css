@@ -31,7 +31,7 @@ form {
 
 .button-add {
   align-items: center;
-  background-color: rgb(0, 145, 255);
+  background-color: rgb(0, 42, 79);
   border-radius: 5px;
   border-style: none;
   box-shadow: 2px 3px 2px 1px black;
@@ -43,7 +43,7 @@ form {
   justify-content: center;
   margin: 10px;
   margin-top: 15px;
-  width: 100px;
+  width: 150px;
 }
 
 .container-table {
@@ -66,22 +66,30 @@ th {
   border-bottom: solid rgb(0, 145, 255);
   font-size: 15px;
   height: 45px;
+  padding: 10px;
 }
 
 thead {
   border-collapse: collapse;
   margin-top: 20px;
+  padding: 10px;
   text-align: center;
+}
+
+tr {
+  padding: 10px;
 }
 
 .container-table tr {
   align-items: center;
   height: 45px;
+  padding: 10px;
   text-align: center;
 }
 
 .container-table tr:nth-child(2n + 1) {
   background-color: #00000020;
+  padding: 10px;
 }
 
 .container-select-option {
@@ -102,7 +110,7 @@ thead {
 
 select {
   background: transparent;
-  border: 0.5px solid blue;
+  border: 0.5px solid rgb(0, 42, 79);
   border-radius: 5px;
   display: flex;
   font-family: Helvetica, sans-serif;
@@ -128,7 +136,7 @@ select:focus {
 
 span {
   background-color: white;
-  color: #3951b2;
+  color: rgb(0, 42, 79);
   display: flex;
   font-size: 12px;
   height: 15px;
@@ -158,8 +166,9 @@ span {
   border: 1px solid lightgrey;
   border-radius: 5px;
   font-size: 14px;
-  height: 40px;
+  height: 34px;
   margin-left: 10px;
+  margin-top: 7px;
   max-width: 220px;
   min-width: 60px;
   outline: none;
@@ -170,7 +179,8 @@ span {
 }
 
 .label-float input:focus {
-  border: 1px solid #3951b2;
+  border: 1px solid rgb(0, 42, 79);
+  -webkit-box-shadow: 0 0 0 30px white inset;
 }
 
 .label-float input::placeholder {
@@ -185,7 +195,7 @@ span {
   padding: 5px;
   pointer-events: none;
   position: absolute;
-  top: calc(50% - 8px);
+  top: calc(50% - 10px);
   transition: all 0.1s linear;
   -webkit-transition: all 0.1s linear;
   -moz-transition: all 0.1s linear;
@@ -205,9 +215,9 @@ span {
 
 .label-float input:focus + label,
 .label-float input:not(:placeholder-shown) + label {
-  color: #3951b2;
+  color: rgb(0, 42, 79);
   font-size: 12px;
-  top: 0;
+  top: 7px;
 }
 
 hr {
@@ -283,7 +293,7 @@ hr {
 
   .label-float input:focus + label,
   .label-float input:not(:placeholder-shown) + label {
-    color: #3951b2;
+    color: rgb(0, 42, 79);
     font-size: 12px;
     top: 6px;
   }
@@ -294,6 +304,15 @@ hr {
     border-top-width: 2px;
     height: 2px;
     margin: auto;
+    width: 90%;
+  }
+
+  form {
+    align-items: center;
+    display: flex;
+    margin: auto;
+    margin-top: -10px;
+    overflow: auto;
     width: 90%;
   }
 }
