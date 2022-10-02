@@ -1,6 +1,6 @@
 <h1 align="center"> :euro: Project Wallet :moneybag:</h1>
 
-## Deploy
+## 📺🖥️📱Deploy
 
 Neste link você tem acesso ao projeto disponibilizado na web.
 
