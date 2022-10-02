@@ -68,6 +68,8 @@ Neste projeto, foram utilizadas as seguintes habilidades:
 
 - Utilizado a lib interna do React, `history.push` para encaminhar para uma nova página desejada.
 
+- Utilizado `PropTypes` para identificar quais propriedades o componente precisa, quais são necessárias e qual o seu tipo correto de cada uma.
+
 - Utilizar a funcionalidade `setItem`, para adicionar email do usuário no localStorage.
 
 - Utilizado a biblioteca externa `react-icons` para inserir ícons.
